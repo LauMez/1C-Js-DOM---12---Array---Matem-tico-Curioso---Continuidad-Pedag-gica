@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tp 12</title>
+</head>
+    <body>
+            <h2>Ingresar Semilla:</h2>
+            <input type="text" id="semilla">
+            <button onclick="main()">Generar Secuencia</button>
+
+        <script>
+            function generarSecuencia() {
+                var semilla = parseInt(document.getElementById("semilla").value);
+                var secuencia = [semilla];
+                while (semilla !== 1) {
+                    if (semilla % 2 === 0) {
+                        semilla /= 2;
+                    } else {
+                        semilla = semilla * 3 + 1;
+                    }
+                    secuencia.push(semilla);
+                }
+
+                return secuencia
+            }
+
+            function main() {
+                const secuencia = generarSecuencia()
+                const mayorNumero = Math.max(...secuencia)
+
+                document.write("Secuencia: " + secuencia)
+                document.write('<br>' + "longitud: " + secuencia.length)
+                document.write('<br>' + "Mayor numero: " + mayorNumero)
+            }
+        </script>
+    </body>
+</html>
