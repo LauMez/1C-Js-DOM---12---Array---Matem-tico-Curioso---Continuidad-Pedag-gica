@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>tp 12</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tp 12</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
     <body>
+
+        <div class="container">
             <h2>Ingresar Semilla:</h2>
-            <input type="text" id="semilla">
-            <button onclick="main()">Generar Secuencia</button>
+            <div class="btn">
+                <input type="text" id="semilla">
+                <button onclick="main()">Generar Secuencia</button>
+            </div>
+
+            <div class="resultado">
+                <div id="secuencia"></div>
+                <div id="longitud"></div>
+                <div id="mayor"></div>
+            </div>
+
+        </div>
 
         <script>
             function generarSecuencia() {
@@ -29,10 +42,13 @@
             function main() {
                 const secuencia = generarSecuencia()
                 const mayorNumero = Math.max(...secuencia)
+                const secuenciaTexto = document.getElementById('secuencia');
+                const longitudTexto = document.getElementById('longitud');
+                const numeroMayor = document.getElementById('mayor');
 
-                document.write("Secuencia: " + secuencia)
-                document.write('<br>' + "longitud: " + secuencia.length)
-                document.write('<br>' + "Mayor numero: " + mayorNumero)
+                secuenciaTexto.innerHTML = `Secuencia: ${secuencia}`
+                longitudTexto.innerHTML = `Longitud: ${secuencia.length}`
+                numeroMayor.innerHTML = `Numero mayor: ${mayorNumero}`
             }
         </script>
     </body>
