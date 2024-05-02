@@ -1,0 +1,51 @@
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(197, 197, 191);
+}
+
+.container {
+    margin-top: 12rem;
+    padding-bottom: 10px;
+    width: 50%;
+    background-color: white;
+}
+.container h2 {
+    text-align: center;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+}
+#semilla {
+    border: 1px solid black;
+}
+.btn button {
+    border: 1px solid black;
+    padding: 6px;
+    margin-left: 10px;
+    border-radius: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all .3s ease;
+}
+.btn button:hover {
+    cursor: pointer;
+    transition: all .3s ease;
+    color: white;
+    background-color: black;
+}
+
+.resultado {
+    margin: 10px;
+    background-color: rgb(197, 197, 191);
+}
+.resultado > * {
+  margin: 4px;
+}
